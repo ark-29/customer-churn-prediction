@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 
-data = pd.read_csv("path")
+data = pd.read_csv("C:\\Users\\hp\\Downloads\\customer_churn\\WA_Fn-UseC_-Telco-Customer-Churn.csv")
 print(data.head())
 print(data.info())
 print(data.describe())
@@ -76,29 +76,3 @@ cm = confusion_matrix(y_test, y_pred)
 print(cm)
 
 
-#For a new custoomer
-new_customer = pd.DataFrame([{
-"gender": "Female",
-"SeniorCitizen": 0,
-"Partner": "Yes",
-"Dependents": "No",
-"tenure": 2,
-"PhoneService": "Yes",
-"MultipleLines": "Yes",
-"InternetService": "Fiber optic",
-"OnlineSecurity": "No",
-"OnlineBackup": "Yes",
-"DeviceProtection": "No",
-"TechSupport": "No",
-"StreamingTV": "Yes",
-"StreamingMovies": "Yes",
-"Contract": "Month-to-month",
-"PaperlessBilling": "Yes",
-"PaymentMethod": "Electronic check",
-"MonthlyCharges": 80.5,
-"TotalCharges": 161.0,
-"tenure_groups": "New"
-}])
-prediction = pipeline.predict(new_customer)
-print(prediction) "Yes - customer is likely to churn"
-"No - customer is not likely to churn"
