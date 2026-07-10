@@ -18,10 +18,7 @@ data["TotalCharges"] = pd.to_numeric(
 data["TotalCharges"],
 errors="coerce"
 )
-data["TotalCharges"].fillna(
-data["TotalCharges"].median(),
-inplace=True
-)
+data["TotalCharges"] = data["TotalCharges"].fillna(data["TotalCharges"].median())
 def tenure_group(t):
     if t <= 12:
         return "New"
