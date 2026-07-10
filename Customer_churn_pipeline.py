@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 
-data = pd.read_csv("C:\\Users\\hp\\Downloads\\customer_churn\\WA_Fn-UseC_-Telco-Customer-Churn.csv")
+data = pd.read_csv("WA_Fn-UseC_-Telco-Customer-Churn.csv")
 print(data.head())
 print(data.info())
 print(data.describe())
